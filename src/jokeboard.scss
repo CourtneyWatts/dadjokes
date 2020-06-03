@@ -1,8 +1,5 @@
 .Jokeboard {
   min-width: 75%;
-  @media only screen and (max-width: 1315px) {
-    min-width: 80%;
-  }
   background-color: white;
   overflow: auto;
   height: 90%;

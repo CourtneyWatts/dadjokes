@@ -3,6 +3,7 @@ import axios from 'axios'
 import Joke from './Joke'
 import './jokeboard.scss'
 import SideBar from './SideBar'
+import FlipMove from 'react-flip-move'
 
 class JokeBoard extends Component {
   static defaultProps = {
@@ -19,6 +20,12 @@ class JokeBoard extends Component {
   }
 
   incrementScore(dir, id) {
+    const joke = this.state.jokes.find((jk) => {
+      return jk.id === id
+    })
+    if (dir === -1 && joke.score <= -15 || joke.score >= 100 && dir === 1) {
+      return
+    }
     this.setState(
       (st) => ({
         jokes: st.jokes.map((jk) =>
@@ -70,8 +77,8 @@ class JokeBoard extends Component {
       })
   }
   getMoreJokes() {
-    if(this.state.isLoading){
-        return
+    if (this.state.isLoading) {
+      return
     }
     this.setState({
       isLoading: true,
@@ -123,8 +130,13 @@ class JokeBoard extends Component {
     }
     return (
       <div className="Jokelist">
-        <SideBar isLoading={this.state.isLoading} getMoreJokes={this.getMoreJokes} />
-        <div className="Jokeboard">{jokesList}</div>
+        <SideBar
+          isLoading={this.state.isLoading}
+          getMoreJokes={this.getMoreJokes}
+        />
+        <div className="Jokeboard">
+          <FlipMove>{jokesList}</FlipMove>
+        </div>
       </div>
     )
   }
