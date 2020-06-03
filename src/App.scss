@@ -1,12 +1,32 @@
 .App {
   text-align: center;
   display: flex;
+  font-family: 'Rubik', sans-serif;
   height: 100vh;
   justify-content: center;
   align-items: center;
+  color: grey;
+  background: linear-gradient(
+    135deg,
+    rgba(179, 229, 252, 1) 0%,
+    rgba(179, 229, 252, 1) 50%,
+    rgba(240, 98, 146, 1) 50%,
+    rgba(240, 98, 146, 1) 100%
+  );
   .Jokelist {
     display: flex;
-    width: 80%;
-    height: 80%;
+    height: 80vh;
+    width: 100%;
+    margin: 0 15vw;
+    align-items: center;
+    @media only screen and (max-width: 1350px) {
+      margin: 0 10vw;
+    }
+    @media only screen and (max-width: 1200px) {
+      margin: 0 5vw;
+    }
+    @media only screen and (max-width: 1315px) {
+      margin: 0 2.5vw;
+    }
   }
 }

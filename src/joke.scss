@@ -2,41 +2,107 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  color: grey;
+  padding: 5px 20px;
   border-bottom: 1px solid grey;
   .Joke-main-group {
     display: flex;
-    font-size: 24px;
+    font-size: 20px;
     align-items: center;
+    height: 70px;
+    i {
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .fa-arrow-up:hover {
+      animation-name: move-up;
+      animation-duration: 0.7s;
+      animation-timing-function: ease-out;
+    }
+    .fa-arrow-down:hover {
+      animation-name: move-down;
+      animation-duration: 0.7s;
+      animation-timing-function: ease-out;
+    }
     .Joke-score-num {
       border-radius: 50%;
-      border: 3px solid ;
-      width: 36px;
-      height: 36px;
+      border: 2px solid;
+      width: 32px;
+      height: 32px;
       padding: 8px;
-      font-size: 32px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 400;
       line-height: 32px;
       margin: 0 4px;
       background-color: white;
-      -webkit-box-shadow: 2px 16px 48px -15px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 2px 16px 48px -15px rgba(0, 0, 0, 0.75);
-      box-shadow: 2px 16px 48px -15px rgba(0, 0, 0, 0.75);
+      box-shadow: 0 12px 58px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.1);
     }
     .Joke-score {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 40px;
+      margin-right: 30px;
     }
     .Joke-text {
       text-align: left;
-      margin-right: 40px;
-      font-size: 20px;
+      margin-right: 30px;
+      font-size: 16px;
+      @media only screen and (max-width: 1315px) {
+        font-size: 13px;
+      }
     }
   }
   .em {
-    font-size: 30px;
+    font-size: 35px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  .em:hover {
+    animation-name: spin;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(20deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes move-up {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes move-down {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(3px);
   }
 }
