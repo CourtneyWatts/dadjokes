@@ -61,11 +61,12 @@ class Joke extends Component {
           </div>
           <div className="Joke-text">{this.props.text}</div>
         </div>
-        <i
-          class={this.getEmoji()}
-          aria-role="presentation"
-          aria-label="ROLLING ON THE FLOOR LAUGHING"
-        ></i>
+        <div className="emoji-container">
+          <i
+            className={this.getEmoji()}
+            aria-label="ROLLING ON THE FLOOR LAUGHING"
+          ></i>
+        </div>
       </div>
     )
   }
