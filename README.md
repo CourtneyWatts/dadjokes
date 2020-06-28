@@ -1,10 +1,10 @@
 ## Dad Jokes
 
-My Dad Jokes app, loads with 10 Jokes fetched from the dad jokes api.
+My Dad Jokes app, loads with 10 jokes fetched from the dad jokes api.
 
 Press the 'More Jokes' Button to fetch more jokes. Jokes are fetched in batches of 10 (no duplicates are ever fetched)
 
-You can upvote or downvote each joke, using the up or down arrows.
+You can upvote or downvote each joke, by clicking on the up or down arrows.
 
 All fetched jokes and their respective rankings are stored to your local storage. Meaning, the only way to reset the app - clear all jokes and scores - is to clear your browser history.
 
@@ -14,7 +14,7 @@ Hosted at: https://courtneywatts.github.io/dadjokes/
 ![](images/desktop-view.jpg)
 
 ### Mobile view
-<img src="images/mobile-view.jpg" width="300px">
+<img src="images/mobile-view.jpg" width="280px">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
