@@ -1,6 +1,6 @@
 ## Dad Jokes
 
-My Dad Jokes app, loads with 10 jokes fetched from the dad jokes api.
+My Dad Jokes app loads with 10 jokes, fetched from the dad jokes api.
 
 Press the 'More Jokes' Button to fetch more jokes. Jokes are fetched in batches of 10 (no duplicates are ever fetched)
 
