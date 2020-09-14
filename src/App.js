@@ -6,7 +6,6 @@ import JokeBoard from './JokeBoard';
 function App() {
   return (
     <div className="App">
-      baba
       <JokeBoard />
     </div>
   );
